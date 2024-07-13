@@ -1,92 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5vcas5mboqfs"]
+[gd_scene load_steps=3 format=3 uid="uid://c5vcas5mboqfs"]
 
-[ext_resource type="Texture2D" uid="uid://dp2xjjhca43fa" path="res://Assets/Sprite/Gangsters_1/Idle_2.png" id="1_pdueg"]
+[ext_resource type="PackedScene" uid="uid://cqybuo3ii535t" path="res://Scenes/individual/agent_jackson.tscn" id="2_3veay"]
 [ext_resource type="FontFile" uid="uid://g5oo6uycgx42" path="res://Assets/Fonts/Pixuf.ttf" id="2_e6chy"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jog4u"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3sgm7"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlydf"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkfvk"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68pq6"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yky14"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqeih"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5l5p6"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jddwl"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(1024, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_amddw"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(1152, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_60uqd"]
-atlas = ExtResource("1_pdueg")
-region = Rect2(1280, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fsqe7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jog4u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3sgm7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jlydf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rkfvk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68pq6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yky14")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gqeih")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5l5p6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jddwl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_amddw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_60uqd")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
 
 [node name="Playable_Characters" type="Control"]
 layout_mode = 3
@@ -105,19 +20,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.161599, 0.258635, 0.0965026, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(386, 308)
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_fsqe7")
-animation = &"Idle"
-autoplay = "Idle"
-
 [node name="ID" type="Label" parent="."]
 layout_mode = 0
 offset_left = 727.0
-offset_top = 141.0
-offset_right = 872.0
-offset_bottom = 193.0
+offset_top = 140.0
+offset_right = 1017.0
+offset_bottom = 192.0
 theme_override_fonts/font = ExtResource("2_e6chy")
 theme_override_font_sizes/font_size = 40
 text = "Agent Jackson:
@@ -139,3 +47,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 clip_text = true
 uppercase = true
+
+[node name="Agent Jackson" parent="." instance=ExtResource("2_3veay")]
+position = Vector2(354, 452)
+scale = Vector2(4, 4)

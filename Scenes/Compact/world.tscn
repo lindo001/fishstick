@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4nfrtictv0q1"]
+
+[ext_resource type="Texture2D" uid="uid://dpr72vxw24lw8" path="res://icon.svg" id="1_4531j"]
+[ext_resource type="PackedScene" uid="uid://cqybuo3ii535t" path="res://Scenes/individual/agent_jackson.tscn" id="2_rc0b1"]
+[ext_resource type="Script" path="res://Scripts/ProgressBar.gd" id="3_jn0dv"]
+[ext_resource type="Texture2D" uid="uid://dupggrrn6vo5j" path="res://Assets/Other/healthbarUnder.png" id="4_a18sn"]
+[ext_resource type="Texture2D" uid="uid://c6kxo7qbp0d6o" path="res://Assets/Other/healthbarProgress.png" id="5_fg43e"]
+[ext_resource type="PackedScene" uid="uid://balbvqyl4t6qt" path="res://Scenes/individual/male_zomble.tscn" id="6_ursja"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhr1k"]
+
+[node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(560, 231)
+scale = Vector2(53.5698, 5.83348)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0.447437, -0.171426)
+scale = Vector2(0.17002, 0.140625)
+texture = ExtResource("1_4531j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.376789, 0)
+scale = Vector2(1.08902, 1)
+shape = SubResource("RectangleShape2D_nhr1k")
+
+[node name="Agent Jackson" parent="." instance=ExtResource("2_rc0b1")]
+position = Vector2(773, 335)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" node_paths=PackedStringArray("player")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -324.0
+offset_top = 36.0
+offset_right = -260.0
+offset_bottom = 46.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+texture_under = ExtResource("4_a18sn")
+texture_progress = ExtResource("5_fg43e")
+script = ExtResource("3_jn0dv")
+player = NodePath("../../Agent Jackson")
+
+[node name="Zomble" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_ursja")]
+position = Vector2(964, 533)
+target = NodePath("../Agent Jackson")

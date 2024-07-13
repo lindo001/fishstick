@@ -2,3 +2,11 @@ res://README.md
 res://Scenes/individual/control.tscn
 res://Scripts/control.gd
 res://Scenes/Compact/playable_characters.tscn
+res://Scenes/Compact/world.tscn
+res://Scenes/individual/agent_jackson.tscn
+res://Scenes/individual/bullet.tscn
+res://Scripts/bullet.gd
+res://Scripts/agent_jackson.gd
+res://Scripts/ProgressBar.gd
+res://Scenes/individual/male_zomble.tscn
+res://Scripts/zomble.gd
