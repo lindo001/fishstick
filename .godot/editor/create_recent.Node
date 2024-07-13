@@ -1,0 +1,11 @@
+Label
+ColorRect
+VBoxContainer
+Container
+VSlider
+Button
+AnimatedSprite2D
+CanvasLayer
+CanvasModulate
+Control
+AudioStreamPlayer2D

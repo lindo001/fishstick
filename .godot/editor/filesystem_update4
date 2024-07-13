@@ -1,0 +1,4 @@
+res://README.md
+res://Scenes/individual/control.tscn
+res://Scripts/control.gd
+res://Scenes/Compact/playable_characters.tscn
