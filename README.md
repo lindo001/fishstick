@@ -1,32 +1,25 @@
-# fishstick
-
-Testing out a simple Idea i had on the bus
+# Fishstick
 
 
-Things to Fix:
-	zombie limitless attacks
-	Once player dies Zombie bugs out
-	
+Testing out a simple idea I had on the bus: a multiplayer zombie shoot 'em up game.
 
-Features to add:
-	Waves :with 2 bosses
-	Different Players
-	Mulitiplayer
-	Better UI
-	Better Graphic
-	Scrollable levels > Like the ones in a Beat em games
-	Menu 
-	blood when enemy is shot
-	Drop Items : Coins- Health
-	
+### Things to Fix:
+- Zombie limitless attacks
+- Zombie bugs out once player dies
 
+### Features to Add:
+- Waves with 2 bosses
+- Different player characters
+- Multiplayer support
+- Improved UI
+- Enhanced graphics
+- Scrollable levels (like in Beat 'em up games)
+- Main menu
+- Blood effects when enemies are shot
+- Item drops: Coins and Health
 
-Creds
-
-craftpix: Sprites
-White_Records: Music
-Pixabay :Gun sounds
-Maker Tech: Sprites
-Pixabay:Sound
-Alfred_Grupstra: Sound/Music
-
+### Credits:
+- Sprites: Craftpix, Maker Tech
+- Music: White_Records, Alfred_Grupstra
+- Gun sounds: Pixabay
+- Sound effects: Pixabay, Alfred_Grupstra
