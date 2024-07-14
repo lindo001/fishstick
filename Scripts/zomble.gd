@@ -4,21 +4,28 @@ extends CharacterBody2D
 @onready var hurt_box = $HurtBox
 @onready var hit_box = $HitBox/CollisionShape2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@export var target:CharacterBody2D
+@onready var target:CharacterBody2D =  get_parent().find_child("Agent Jackson")
 @export var wipeOutDamagePoints:int =30
+@onready var zombie_sound:AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 var direction = Vector2.LEFT
 var max_health:int = 60
 var current_health:int = max_health
 var moveSpeed:int = 30
 var normalAni:bool = true
 var damageAmount = 10
+var played:bool = true
 
-
+#func _ready():
+	#zombie_sound.play()
 
 func _on_hurt_box_area_entered(area:Area2D):
 	
 	if area.is_in_group("Bullet"):
 		current_health= current_health - area.damageAmount
+		if played:
+			zombie_sound.play()
+			played=false
 	if area.is_in_group("player_strike"):
 		current_health = current_health - wipeOutDamagePoints
 
@@ -51,4 +58,5 @@ func _on_animated_sprite_2d_animation_finished():
 		normalAni = true
 		hit_box.disabled = true
 	if animated_sprite_2d.animation == "Death":
+		
 		queue_free()

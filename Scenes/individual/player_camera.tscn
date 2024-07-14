@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgk66cpy0foan"]
+
+[ext_resource type="Script" path="res://Scripts/player_camera.gd" id="1_ebuyn"]
+
+[node name="Player_Camera" type="Camera2D"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = -648
+limit_right = 1152
+limit_bottom = 648
+limit_smoothed = true
+script = ExtResource("1_ebuyn")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

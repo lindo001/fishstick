@@ -7,13 +7,19 @@ var moveSpeed:int = 70
 var normalAni:bool = true
 var maxHealth:int = 100
 var currentHealth:int = maxHealth 
+var isFacingRight:bool = true
 signal healthChanged 
 @onready var marker:Marker2D = $Marker2D
 @onready var sprite = $AnimatedSprite2D
 @onready var close_range = $HitBox/CollisionShape2D
 @onready var hurt_box = $HurtBox/CollisionShape2D
 @onready var hit_box = $HitBox/CollisionShape2D
+@onready var close_range_left = $HitBox_left/CollisionShape2D
 @onready var collision_shape = $CollisionShape2D
+@onready var player_camera = $Player_Camera
+@onready var gun_sound= $AudioStreamPlayer2D
+
+
 
 
 func _physics_process(delta):
@@ -29,7 +35,10 @@ func _physics_process(delta):
 	elif  Input.is_action_just_pressed("second_attack") &&currentHealth>0:
 		normalAni = false
 		sprite.play("Attack_0")
-		close_range.disabled = false
+		if isFacingRight:
+			close_range_left.disabled = false
+		else:
+			close_range.disabled = false
 		velocity.x  = 0
 		velocity.y=0
 	if Input.is_action_pressed("down") &&normalAni&&currentHealth>0:
@@ -44,12 +53,14 @@ func _physics_process(delta):
 		velocity.x = -moveSpeed
 		velocity.y = 0
 		sprite.flip_h = true
+		isFacingRight = sprite.flip_h
 		#sprite.scale.x = sprite.scale.x
 		sprite.play("Walk")
 	elif  Input.is_action_pressed("right")&& normalAni&&currentHealth>0:
 		velocity.x = moveSpeed
 		velocity.y = 0
 		sprite.flip_h =false
+		isFacingRight = sprite.flip_h
 		#sprite.scale.x = -sprite.scale.x
 		
 		sprite.play("Walk")
@@ -67,16 +78,20 @@ func death():
 	sprite.play("Dead")
 func fire():
 	var insta = bullet.instantiate()
+	insta.XdirectionRight = !isFacingRight
 	insta.position = marker.position
-	add_child(insta) 
+	add_child(insta)
+	gun_sound.play()
+	player_camera.shake(0.2,1) 
+	
 
 
 
 func _on_hurt_box_area_entered(area:Area2D):
 	#print("Something entered HitBox")
-	if area.is_in_group("Bullet"):
-		healthChanged.emit()
-		currentHealth = currentHealth - area.damageAmount
+	#if area.is_in_group("Bullet"):
+		#healthChanged.emit()
+		#currentHealth = currentHealth - area.damageAmount
 	if area.is_in_group("enemy_strike"):
 		healthChanged.emit()
 		
@@ -97,3 +112,4 @@ func _on_animated_sprite_2d_animation_finished():
 	if sprite.animation == "Attack_0":
 		normalAni = true
 		close_range.disabled = true
+		close_range_left.disabled =true
