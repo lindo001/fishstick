@@ -8,6 +8,7 @@ var normalAni:bool = true
 var maxHealth:int = 100
 var currentHealth:int = maxHealth 
 var isFacingRight:bool = true
+var runState:bool = false
 signal healthChanged 
 @onready var marker:Marker2D = $Marker2D
 @onready var sprite = $AnimatedSprite2D
@@ -25,7 +26,9 @@ signal healthChanged
 func _physics_process(delta):
 	if currentHealth<1:
 		death()
-	
+	if Input.is_action_just_pressed("shift"):
+		runState =! runState
+	print(runState)
 	if Input.is_action_just_pressed("fire") &&currentHealth>0:
 		normalAni = false
 		sprite.play("Shoot")
@@ -41,7 +44,25 @@ func _physics_process(delta):
 			close_range.disabled = false
 		velocity.x  = 0
 		velocity.y=0
-	if Input.is_action_pressed("down") &&normalAni&&currentHealth>0:
+	if runState &&Input.is_action_pressed("up")&&normalAni&&currentHealth>0:
+		velocity.y =-moveSpeed *3
+		velocity.x = 0
+		sprite.play("Run")
+	elif runState &&Input.is_action_pressed("down")&&normalAni&&currentHealth>0:
+		velocity.y = moveSpeed*3
+		velocity.x = 0
+		sprite.play("Run")
+	elif runState &&Input.is_action_pressed("left")&&normalAni&&currentHealth>0:
+		velocity.x = -moveSpeed*3
+		velocity.y = 0
+		sprite.flip_h = true
+		sprite.play("Run")
+	elif runState &&Input.is_action_pressed("right")&&normalAni&&currentHealth>0:
+		velocity.x = moveSpeed*3
+		velocity.y = 0
+		sprite.flip_h = false
+		sprite.play("Run")
+	elif Input.is_action_pressed("down") &&normalAni&&currentHealth>0:
 		velocity.y = moveSpeed
 		velocity.x = 0
 		sprite.play("Walk")
@@ -109,6 +130,7 @@ func _on_animated_sprite_2d_animation_finished():
 		hurt_box.disabled = true
 		collision_shape.disabled =true
 		set_physics_process(false)
+	
 	if sprite.animation == "Attack_0":
 		normalAni = true
 		close_range.disabled = true

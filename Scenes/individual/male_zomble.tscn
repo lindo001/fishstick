@@ -278,6 +278,8 @@ size = Vector2(99, 59)
 size = Vector2(81, 36)
 
 [node name="Zomble" type="CharacterBody2D"]
+position = Vector2(151, 112)
+collision_layer = 2
 script = ExtResource("1_r6hnm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

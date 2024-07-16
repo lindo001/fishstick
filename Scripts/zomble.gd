@@ -21,6 +21,7 @@ var played:bool = true
 
 func _on_hurt_box_area_entered(area:Area2D):
 	
+	
 	if area.is_in_group("Bullet"):
 		current_health= current_health - area.damageAmount
 		if played:
@@ -34,6 +35,9 @@ func _process(delta):
 	#raycast.target_position(target.position)
 	health_bar.value = current_health
 	raycast.target_position
+	if raycast.is_colliding():
+		var collision = raycast.get_collider()
+		print(raycast.get_collider())
 	if !raycast.is_colliding() && normalAni && current_health>0:
 		direction = (target.position - global_position).normalized()
 		raycast.target_position = direction * 40
@@ -48,6 +52,7 @@ func _process(delta):
 			normalAni = false
 			animated_sprite_2d.play("Attack")
 			hit_box.disabled = false
+			
 	else:
 		animated_sprite_2d.play("Death") 
 	

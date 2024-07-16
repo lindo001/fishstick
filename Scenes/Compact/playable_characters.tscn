@@ -1,15 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://c5vcas5mboqfs"]
 
-[ext_resource type="PackedScene" uid="uid://cqybuo3ii535t" path="res://Scenes/individual/agent_jackson.tscn" id="2_3veay"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_jab8y"]
 [ext_resource type="FontFile" uid="uid://g5oo6uycgx42" path="res://Assets/Fonts/Pixuf.ttf" id="2_e6chy"]
 
-[node name="Playable_Characters" type="Control"]
+[node name="MainMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jab8y")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -21,11 +23,12 @@ grow_vertical = 2
 color = Color(0.161599, 0.258635, 0.0965026, 1)
 
 [node name="ID" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 727.0
-offset_top = 140.0
-offset_right = 1017.0
-offset_bottom = 192.0
+offset_left = 416.0
+offset_top = 27.0
+offset_right = 706.0
+offset_bottom = 79.0
 theme_override_fonts/font = ExtResource("2_e6chy")
 theme_override_font_sizes/font_size = 40
 text = "Agent Jackson:
@@ -33,11 +36,12 @@ text = "Agent Jackson:
 uppercase = true
 
 [node name="Story" type="Label" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 724.0
-offset_top = 246.0
-offset_right = 984.0
-offset_bottom = 476.0
+offset_left = 215.0
+offset_top = 452.0
+offset_right = 908.0
+offset_bottom = 682.0
 theme_override_fonts/font = ExtResource("2_e6chy")
 theme_override_font_sizes/font_size = 20
 text = "
@@ -48,6 +52,206 @@ autowrap_mode = 3
 clip_text = true
 uppercase = true
 
-[node name="Agent Jackson" parent="." instance=ExtResource("2_3veay")]
-position = Vector2(354, 452)
-scale = Vector2(4, 4)
+[node name="Main" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="Main"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Start
+"
+
+[node name="Option" type="Button" parent="Main"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Options
+"
+
+[node name="Exit" type="Button" parent="Main"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Exit
+"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -52.0
+offset_right = 100.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Video" type="Button" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Video"
+
+[node name="Audio" type="Button" parent="Options/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Audio
+"
+
+[node name="GamePlay" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+text = "Game Play"
+
+[node name="Back" type="Button" parent="Options"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -31.0
+offset_right = 22.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back
+"
+
+[node name="GamePlay" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GamePlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Checks" type="VBoxContainer" parent="GamePlay/HBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="GamePlay/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="GamePlay/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="GamePlay/HBoxContainer/Checks"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="GamePlay/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Can die" type="Label" parent="GamePlay/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Can die"
+
+[node name="Unlimited Ammo" type="Label" parent="GamePlay/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Unlimited Ammo"
+
+[node name="Null" type="Label" parent="GamePlay/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Null
+"
+
+[node name="Button" type="Button" parent="GamePlay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -38.5
+offset_right = 113.5
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Master"
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Music"
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+text = "Sound FX"
+
+[node name="Sliders" type="VBoxContainer" parent="Audio/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Master" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2
+
+[node name="Music" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2
+
+[node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Sliders"]
+layout_mode = 2

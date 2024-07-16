@@ -4,10 +4,5 @@ res://Scenes/Compact/world.tscn
 res://Scenes/individual/agent_jackson.tscn
 res://Scenes/individual/bullet.tscn
 res://Scenes/individual/male_zomble.tscn
-res://Scripts/world.gd
-res://Scripts/zomble.gd
-res://Scripts/agent_jackson.gd
-res://Scripts/bullet.gd
-res://README.md
-res://Scripts/player_camera.gd
 res://Scenes/individual/player_camera.tscn
+res://Scripts/MainMenu.gd

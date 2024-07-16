@@ -1,4 +1,10 @@
 Label
+HSlider
+VBoxContainer
+HBoxContainer
+Control
+Button
+CheckBox
 AnimatedSprite2D
 Node2D
 ParallaxBackground
@@ -6,9 +12,3 @@ ParallaxLayer
 TileMap
 AudioStreamPlayer2D
 Timer
-Camera2D
-Marker2D
-MultiplayerSpawner
-Button
-TextureProgressBar
-RayCast2D
