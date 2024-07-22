@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var target:CharacterBody2D =  get_parent().find_child("Agent Jackson")
 @export var wipeOutDamagePoints:int =30
+@export var drop_rate:int = 40
 @onready var zombie_sound:AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var direction = Vector2.LEFT
@@ -57,11 +58,13 @@ func _process(delta):
 		animated_sprite_2d.play("Death") 
 	
 
-
+func drop_item():
+	if drop_rate>60:
+		print("drop")
 func _on_animated_sprite_2d_animation_finished():
 	if animated_sprite_2d.animation == "Attack":
 		normalAni = true
 		hit_box.disabled = true
 	if animated_sprite_2d.animation == "Death":
-		
+		drop_item()
 		queue_free()

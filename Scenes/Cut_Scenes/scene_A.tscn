@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckqn2wxlot5v1"]
+
+[ext_resource type="Script" path="res://Scripts/One_shot_scripts/scene_A.gd" id="1_g8gus"]
+[ext_resource type="PackedScene" uid="uid://cqybuo3ii535t" path="res://Scenes/individual/agent_jackson.tscn" id="2_0coai"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8gus")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.487009, 0.487009, 0.487009, 1)
+
+[node name="Agent Jackson" parent="." instance=ExtResource("2_0coai")]
+position = Vector2(965, 659)
+scale = Vector2(7, 7)
+
+[node name="Player_Camera" parent="Agent Jackson" index="6"]
+zoom = Vector2(1, 1)
+
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -240.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.207512, 0.207512, 0.207512, 1)
+
+[node name="Label" type="Label" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="Agent Jackson"]

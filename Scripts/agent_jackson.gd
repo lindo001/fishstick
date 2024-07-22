@@ -1,7 +1,11 @@
 extends CharacterBody2D
 
 
-
+enum EFFECT {
+	HP,
+	AMMO,
+	ARMOR
+}
 var bullet:PackedScene = preload("res://Scenes/individual/bullet.tscn")
 var moveSpeed:int = 70
 var normalAni:bool = true
@@ -9,6 +13,7 @@ var maxHealth:int = 100
 var currentHealth:int = maxHealth 
 var isFacingRight:bool = true
 var runState:bool = false
+
 signal healthChanged 
 @onready var marker:Marker2D = $Marker2D
 @onready var sprite = $AnimatedSprite2D
@@ -28,7 +33,7 @@ func _physics_process(delta):
 		death()
 	if Input.is_action_just_pressed("shift"):
 		runState =! runState
-	print(runState)
+	
 	if Input.is_action_just_pressed("fire") &&currentHealth>0:
 		normalAni = false
 		sprite.play("Shoot")
@@ -135,3 +140,19 @@ func _on_animated_sprite_2d_animation_finished():
 		normalAni = true
 		close_range.disabled = true
 		close_range_left.disabled =true
+
+
+func change_status(effect, default_value):
+	match effect:
+		EFFECT.HP:
+			currentHealth += default_value
+			print(currentHealth)
+			
+		EFFECT.AMMO:
+			print("Updated Ammo")
+		EFFECT.ARMOR:
+			print("Updated Armor")
+		_:
+			print("Unknown effect: ", effect)
+
+		

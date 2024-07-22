@@ -1,3 +1,5 @@
+res://Scenes/Cut_Scenes/scene_A.tscn
+res://Scripts/One_shot_scripts/scene_A.gd
 res://Scenes/individual/control.tscn
 res://Scenes/Compact/playable_characters.tscn
 res://Scenes/Compact/world.tscn
@@ -5,4 +7,11 @@ res://Scenes/individual/agent_jackson.tscn
 res://Scenes/individual/bullet.tscn
 res://Scenes/individual/male_zomble.tscn
 res://Scenes/individual/player_camera.tscn
-res://Scripts/MainMenu.gd
+res://Scenes/Cut_Scenes/control.tscn
+res://Scenes/UI/ui_when_playing.tscn
+res://Scripts/ProgressBar.gd
+res://Scripts/zomble.gd
+res://Scenes/drop_items/item.tscn
+res://Scripts/drop_items_script/item.gd
+res://Scenes/drop_items/ammo.tscn
+res://Scripts/agent_jackson.gd

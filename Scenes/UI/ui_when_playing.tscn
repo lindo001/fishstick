@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd0h5i8i2vjlq"]
+
+[ext_resource type="Texture2D" uid="uid://dupggrrn6vo5j" path="res://Assets/Other/healthbarUnder.png" id="2_bm66q"]
+[ext_resource type="Texture2D" uid="uid://c6kxo7qbp0d6o" path="res://Assets/Other/healthbarProgress.png" id="3_t3msa"]
+[ext_resource type="Texture2D" uid="uid://bivrsmekyhsp0" path="res://Assets/Sprite/UI/ammo-pistol 32px.png" id="4_fd4cf"]
+[ext_resource type="Script" path="res://Scripts/ProgressBar.gd" id="4_sa7gf"]
+[ext_resource type="Texture2D" uid="uid://bnys6vkd71w12" path="res://Assets/Sprite/UI/health-red 32px.png" id="5_xejgw"]
+[ext_resource type="Texture2D" uid="uid://rh2j1xnibjuk" path="res://Assets/Sprite/UI/health-armor 32px.png" id="6_errtk"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("4_sa7gf")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1057.0
+offset_top = 33.0
+offset_right = -993.0
+offset_bottom = 43.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+texture_under = ExtResource("2_bm66q")
+texture_progress = ExtResource("3_t3msa")
+
+[node name="Sheild" type="TextureProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1060.0
+offset_top = 95.0
+offset_right = -996.0
+offset_bottom = 105.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+texture_under = ExtResource("2_bm66q")
+texture_progress = ExtResource("3_t3msa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_right = 0.017
+anchor_bottom = 0.062
+offset_left = 18.0
+offset_top = 143.0
+offset_right = 69.399
+offset_bottom = 173.824
+texture = ExtResource("4_fd4cf")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 90.0
+offset_bottom = 96.0
+texture = ExtResource("5_xejgw")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 11.0
+offset_top = 79.0
+offset_right = 85.0
+offset_bottom = 161.0
+texture = ExtResource("6_errtk")
+
+[node name="Armer" type="Label" parent="."]
+offset_left = 99.0
+offset_top = 153.0
+offset_right = 230.0
+offset_bottom = 210.0
+text = "ddddddd"
+vertical_alignment = 1

@@ -10,14 +10,16 @@ var enemyCap:int = 15
 var enemySpawned:int = 0
 
 
-
+func _ready():
+	spawn(_rightSpawner_1)
 
 func _process(delta):
-	if enemySpawned >enemyCap:
-		timer.stop()
-	elif timer.is_stopped():
-		timer.start()
-		
+	
+	#if enemySpawned >enemyCap:
+		#timer.stop()
+	#elif timer.is_stopped():
+		#timer.start()
+		pass
 
 func spawn(chosen):
 	var en = enemyEntity.instantiate()

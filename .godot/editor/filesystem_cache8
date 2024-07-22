@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1721159595
+::res://::1721676358
 icon.svg::CompressedTexture2D::8249181427230432465::1721070553::1721070553::1::::<><>::
 README.md::TextFile::-1::1721070553::0::1::::<><>::
-::res://Assets/::1721070553
+::res://Assets/::1721677550
 ::res://Assets/Fonts/::1721070553
 Pixuf.ttf::FontFile::483941093676715681::1721070553::1721070553::1::::<><>::
 ::res://Assets/Other/::1721070553
@@ -13,7 +13,7 @@ gun_shot.mp3::AudioStreamMP3::2683455577731276475::1721070553::1721070553::1::::
 pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3::AudioStreamMP3::865722294781966309::1721070553::1721070553::1::::<><>::
 zombie-growl-3-6863.mp3::AudioStreamMP3::8629421675651964561::1721070553::1721070553::1::::<><>::
 zombie-party-time-124560(1).mp3::AudioStreamMP3::2548003215342165992::1721070553::1721070553::1::::<><>::
-::res://Assets/Sprite/::1721070553
+::res://Assets/Sprite/::1721677544
 ::res://Assets/Sprite/Gangsters_1/::1721070553
 Attack_1.png::CompressedTexture2D::363252652047523522::1721070553::1721070553::1::::<><>::
 Dead.png::CompressedTexture2D::470180846814230062::1721070553::1721070553::1::::<><>::
@@ -47,6 +47,16 @@ Recharge.png::CompressedTexture2D::8914757004687796632::1721070553::1721070553::
 Run.png::CompressedTexture2D::5984295581138865929::1721070553::1721070553::1::::<><>::
 Shot.png::CompressedTexture2D::6996892972967635886::1721070553::1721070553::1::::<><>::
 Walk.png::CompressedTexture2D::1637677029342724347::1721070553::1721070553::1::::<><>::
+::res://Assets/Sprite/UI/::1721677545
+ammo-pistol 32px.png::CompressedTexture2D::2992348335746075607::1679934650::1721677551::1::::<><>::
+ammo-pistol-alt 32px.png::CompressedTexture2D::5136159755069583604::1679934676::1721677551::1::::<><>::
+ammo-rifle 32px.png::CompressedTexture2D::6618564944033611515::1679934658::1721677551::1::::<><>::
+ammo-rifle-alt 32px.png::CompressedTexture2D::76862642423790097::1679934684::1721677551::1::::<><>::
+ammo-shotgun 32px.png::CompressedTexture2D::1360602709802539470::1679934666::1721677551::1::::<><>::
+ammo-shotgun-alt 32px.png::CompressedTexture2D::3712048524228236683::1679935088::1721677551::1::::<><>::
+health-armor 32px.png::CompressedTexture2D::1209317818813814462::1679934634::1721677551::1::::<><>::
+health-green 32px.png::CompressedTexture2D::4300330005097624431::1679934626::1721677551::1::::<><>::
+health-red 32px.png::CompressedTexture2D::3349570101184319255::1679934618::1721677551::1::::<><>::
 ::res://Assets/Sprite/Wild Zombie/::1721070553
 Attack_1.png::CompressedTexture2D::4396982551394107033::1721070553::1721070553::1::::<><>::
 Attack_2.png::CompressedTexture2D::6393972313138922814::1721070553::1721070553::1::::<><>::
@@ -328,22 +338,28 @@ Card.png::CompressedTexture2D::5121517823995281812::1721070553::1721070553::1:::
 Chest.png::CompressedTexture2D::3219633851723825700::1721070553::1721070553::1::::<><>::
 Money.png::CompressedTexture2D::3128261819047612171::1721070553::1721070553::1::::<><>::
 Trap.png::CompressedTexture2D::1501838082410417696::1721070553::1721070553::1::::<><>::
-::res://Scenes/::1721070553
-::res://Scenes/Compact/::1721076388
-playable_characters.tscn::PackedScene::6921981035659527292::1721076387::0::1::::<><>::uid://cqybuo3ii535t::::res://Scenes/individual/agent_jackson.tscn<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf
-world.tscn::PackedScene::4449069013878236982::1721076388::0::1::::<><>::uid://dpr72vxw24lw8::::res://icon.svg<>res://Scripts/world.gd<>uid://cqybuo3ii535t::::res://Scenes/individual/agent_jackson.tscn<>res://Scripts/ProgressBar.gd<>uid://dupggrrn6vo5j::::res://Assets/Other/healthbarUnder.png<>uid://c6kxo7qbp0d6o::::res://Assets/Other/healthbarProgress.png<>uid://bckjigibbyl7m::::res://Assets/Sounds/zombie-party-time-124560(1).mp3<>uid://rg000qujmor0::::res://Assets/TileSet/powerstation/1 Tiles/Tileset.png<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf<>uid://cxuh5mv35fit6::::res://Assets/TileSet/powerstation/2 Background/Night/1.png<>uid://berbgohl57c0x::::res://Assets/TileSet/powerstation/2 Background/Night/3.png<>uid://cyxs2a5a16ag2::::res://Assets/TileSet/powerstation/2 Background/Night/2.png<>uid://bktmarqcv256n::::res://Assets/TileSet/powerstation/4 Animated objects/Money.png<>uid://bpq2vubah40yr::::res://Assets/TileSet/powerstation/2 Background/Night/5.png
-::res://Scenes/individual/::1721076388
-agent_jackson.tscn::PackedScene::5945505143519831535::1721076388::0::1::::<><>::uid://ff7yoeqx0l0m::::res://Assets/Sprite/Gangsters_1/Attack_1.png<>res://Scripts/agent_jackson.gd<>uid://gx02sgpna4w5::::res://Assets/Sprite/Gangsters_1/Dead.png<>uid://cp1fec44hu1xu::::res://Assets/Sprite/Gangsters_1/Idle.png<>uid://oyhxryc76c6k::::res://Assets/Sprite/Gangsters_1/Shot.png<>uid://cfj8l0vd10ugo::::res://Assets/Sprite/Gangsters_1/Walk.png<>uid://xmiw5nb35dhb::::res://Assets/Sprite/Gangsters_1/Run.png<>uid://mdn7eax0hm0::::res://Assets/Sprite/Gangsters_1/Hurt.png<>uid://cgk66cpy0foan::::res://Scenes/individual/player_camera.tscn<>uid://beh5eeh4shwql::::res://Assets/Sounds/gun_shot.mp3
-bullet.tscn::PackedScene::4979064556929562703::1721076388::0::1::::<><>::uid://dpr72vxw24lw8::::res://icon.svg<>res://Scripts/bullet.gd
-control.tscn::PackedScene::9125982201719297569::1721076387::0::1::::<><>::res://Scripts/control.gd<>uid://mlmk4t66h6a8::::res://Assets/Sounds/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf
-male_zomble.tscn::PackedScene::2409227935640762743::1721076388::0::1::::<><>::res://Scripts/zomble.gd<>uid://c4lku5xb8st55::::res://Assets/Sprite/Zombie Man/Attack_3.png<>uid://cx321uv475ejt::::res://Assets/Sprite/Zombie Man/Dead.png<>uid://kks8tksmrrud::::res://Assets/Sprite/Zombie Man/Idle.png<>uid://cp44eri6x0nj2::::res://Assets/Sprite/Zombie Man/Run.png<>uid://ds8s8q63td7mu::::res://Assets/Sprite/Zombie Man/Walk.png<>uid://c6kxo7qbp0d6o::::res://Assets/Other/healthbarProgress.png<>uid://du7fkxiipffg0::::res://Assets/Sounds/zombie-growl-3-6863.mp3
-player_camera.tscn::PackedScene::5216555922484644157::1721076388::0::1::::<><>::res://Scripts/player_camera.gd
-::res://Scripts/::1721076262
+::res://Scenes/::1721673800
+::res://Scenes/Compact/::1721677382
+playable_characters.tscn::PackedScene::6921981035659527292::1721677382::0::1::::<><>::res://Scripts/MainMenu.gd<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf
+world.tscn::PackedScene::4449069013878236982::1721677382::0::1::::<><>::res://Scripts/world.gd<>uid://cqybuo3ii535t::::res://Scenes/individual/agent_jackson.tscn<>res://Scripts/ProgressBar.gd<>uid://dupggrrn6vo5j::::res://Assets/Other/healthbarUnder.png<>uid://c6kxo7qbp0d6o::::res://Assets/Other/healthbarProgress.png<>uid://bckjigibbyl7m::::res://Assets/Sounds/zombie-party-time-124560(1).mp3<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf<>uid://cxuh5mv35fit6::::res://Assets/TileSet/powerstation/2 Background/Night/1.png<>uid://berbgohl57c0x::::res://Assets/TileSet/powerstation/2 Background/Night/3.png<>uid://cyxs2a5a16ag2::::res://Assets/TileSet/powerstation/2 Background/Night/2.png<>uid://bktmarqcv256n::::res://Assets/TileSet/powerstation/4 Animated objects/Money.png<>uid://bpq2vubah40yr::::res://Assets/TileSet/powerstation/2 Background/Night/5.png
+::res://Scenes/Cut_Scenes/::1721677382
+control.tscn::PackedScene::7326118726497514434::1721676840::0::1::::<><>::
+scene_A.tscn::PackedScene::5508598576736363892::1721677382::0::1::::<><>::res://Scripts/One_shot_scripts/scene_A.gd<>uid://cqybuo3ii535t::::res://Scenes/individual/agent_jackson.tscn
+::res://Scenes/individual/::1721677382
+agent_jackson.tscn::PackedScene::5945505143519831535::1721677382::0::1::::<><>::uid://ff7yoeqx0l0m::::res://Assets/Sprite/Gangsters_1/Attack_1.png<>res://Scripts/agent_jackson.gd<>uid://gx02sgpna4w5::::res://Assets/Sprite/Gangsters_1/Dead.png<>uid://cp1fec44hu1xu::::res://Assets/Sprite/Gangsters_1/Idle.png<>uid://oyhxryc76c6k::::res://Assets/Sprite/Gangsters_1/Shot.png<>uid://cfj8l0vd10ugo::::res://Assets/Sprite/Gangsters_1/Walk.png<>uid://xmiw5nb35dhb::::res://Assets/Sprite/Gangsters_1/Run.png<>uid://mdn7eax0hm0::::res://Assets/Sprite/Gangsters_1/Hurt.png<>uid://cgk66cpy0foan::::res://Scenes/individual/player_camera.tscn<>uid://beh5eeh4shwql::::res://Assets/Sounds/gun_shot.mp3
+bullet.tscn::PackedScene::4979064556929562703::1721677382::0::1::::<><>::uid://dpr72vxw24lw8::::res://icon.svg<>res://Scripts/bullet.gd
+control.tscn::PackedScene::9125982201719297569::1721677382::0::1::::<><>::res://Scripts/control.gd<>uid://mlmk4t66h6a8::::res://Assets/Sounds/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3<>uid://g5oo6uycgx42::::res://Assets/Fonts/Pixuf.ttf
+male_zomble.tscn::PackedScene::2409227935640762743::1721677382::0::1::::<><>::res://Scripts/zomble.gd<>uid://c4lku5xb8st55::::res://Assets/Sprite/Zombie Man/Attack_3.png<>uid://cx321uv475ejt::::res://Assets/Sprite/Zombie Man/Dead.png<>uid://kks8tksmrrud::::res://Assets/Sprite/Zombie Man/Idle.png<>uid://cp44eri6x0nj2::::res://Assets/Sprite/Zombie Man/Run.png<>uid://ds8s8q63td7mu::::res://Assets/Sprite/Zombie Man/Walk.png<>uid://c6kxo7qbp0d6o::::res://Assets/Other/healthbarProgress.png<>uid://du7fkxiipffg0::::res://Assets/Sounds/zombie-growl-3-6863.mp3
+player_camera.tscn::PackedScene::5216555922484644157::1721677382::0::1::::<><>::res://Scripts/player_camera.gd
+::res://Scripts/::1721674038
 agent_jackson.gd::GDScript::-1::1721076262::0::1::::<>CharacterBody2D<>::
 bullet.gd::GDScript::-1::1721070553::0::1::::<>Area2D<>::
 control.gd::GDScript::-1::1721070553::0::1::::<>Control<>::
+MainMenu.gd::GDScript::-1::1721160919::0::1::::<>Control<>::
 Multiplayer.gd::GDScript::-1::1721070553::0::1::::<>Control<>::
 player_camera.gd::GDScript::-1::1721070553::0::1::::<>Camera2D<>::
 ProgressBar.gd::GDScript::-1::1721070553::0::1::::<>TextureProgressBar<>::
-world.gd::GDScript::-1::1721074867::0::1::::<>Node2D<>::
+world.gd::GDScript::-1::1721673133::0::1::::<>Node2D<>::
 zomble.gd::GDScript::-1::1721072327::0::1::::<>CharacterBody2D<>::
+::res://Scripts/One_shot_scripts/::1721677379
+scene_A.gd::GDScript::-1::1721677379::0::1::::<>Control<>::
